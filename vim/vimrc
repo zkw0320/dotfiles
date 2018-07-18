@@ -1,21 +1,16 @@
-""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer:
-"   Ouyang Xiongyi
-"
-"   Inspired by http://easwy.com/blog/
-""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible                " be iMproved
 filetype off                    " required!
 
-let mapleader = "\ "            " must on the top
-let g:mapleader = "\ "
+let mapleader = ","            " must on the top
+let g:mapleader = ","
+let g:go_version_warning = 0
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle.git'
 
 Bundle 'hari-rangarajan/CCTree'
@@ -199,7 +194,7 @@ augroup json_autocmd
   autocmd FileType json set autoindent
   autocmd FileType json set formatoptions=tcq2l
   autocmd FileType json set textwidth=78 shiftwidth=2
-  autocmd FileType json set softtabstop=2 tabstop=8
+  autocmd FileType json set softtabstop=2 tabstop=4
   autocmd FileType json set expandtab
   autocmd FileType json set foldmethod=syntax
 augroup END
@@ -255,7 +250,7 @@ Bundle 'gcavallanti/vim-noscrollbar'
 function! Noscrollbar(...)
     let w:airline_section_z = '%{noscrollbar#statusline()}'
 endfunction
-call airline#add_statusline_func('Noscrollbar')
+"call airline#add_statusline_func('Noscrollbar')
 
 " go
 Bundle 'fatih/vim-go'
@@ -340,14 +335,14 @@ endif
 "f: Find this file
 "	*gf* will be more helpful without cscope database
 "i: Find files #including this file
-noremap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-noremap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-noremap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-noremap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-noremap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-noremap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-noremap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-noremap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+noremap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+noremap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+noremap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+noremap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+noremap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+noremap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+noremap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+noremap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 map <F6> :cs find g<space>
 map <leader><F5> :!gentags<CR>:cs reset<CR>
 
@@ -387,10 +382,8 @@ set expandtab
 
 set fileformats=unix,dos
 set autoindent
-"set tabstop=4
-"set shiftwidth=4
-set tabstop=8
-set shiftwidth=8
+set tabstop=4
+set shiftwidth=4
 set fileencodings=ucs-bom,utf-8,chinese
 set showcmd
 set foldlevel=50
@@ -492,7 +485,7 @@ map <C-h> <C-w>h
 nmap - ^
 nmap = $
 vmap - ^
-vmap = $
+"vmap = $
 
 " use Q for recording
 noremap q <Nop>
