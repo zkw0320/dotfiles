@@ -1,6 +1,6 @@
 [user]
-	name = Ouyang Xiongyi
-	email = oywymail@163.com
+	name = kaiwen.zhao
+	email = kaiwen.zhao@phicomm.com
 [color]
 	ui = auto
 [diff]
@@ -21,3 +21,5 @@
 	default = matching
 [include]
 	    path = ~/.gitconfig_ignored
+[commit]
+	template = /home/kaiwen.zhao/.gitmessage.txt
