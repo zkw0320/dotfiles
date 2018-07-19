@@ -6,6 +6,8 @@ let mapleader = ","            " must on the top
 let g:mapleader = ","
 let g:go_version_warning = 0
 
+inoremap ;; <ESC>
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -107,7 +109,7 @@ let g:ctrlp_tjump_only_silent = 1
 " Snippet
 Bundle 'msanders/snipmate.vim.git'
 Bundle 'honza/vim-snippets'
-let g:snips_author = 'Ouyang Xiongyi'
+let g:snips_author = 'kaiwen.zhao'
 
 " Git
 Bundle  'tpope/vim-fugitive'
