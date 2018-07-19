@@ -28,7 +28,7 @@ ACCON_CSS=~/.pandoc/pandoc_css/tplink_accondion.css
 CORE_CSS=~/.pandoc/pandoc_css/ie7unnel.css
 SIDEBAR_CSS=~/.pandoc/pandoc_css/nav.css
 
-T=huawei.html
+T=phicomm.html
 TOC=--toc
 
 while getopts ":c:s:a:rnp" OPTION
